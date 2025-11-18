@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="./fonts/Montserrat/stylesheet.css">
 	<link rel="stylesheet" href="./icons/fontawesome-free-7.1.0-web/css/all.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
 	<title>swimSchool</title>
 </head>
 
@@ -397,14 +399,17 @@
 					<form action="#">
 						<div class="formInfoInputs">
 							<input type="text" placeholder="Ваше имя и фамилия">
-							<input type="number" placeholder="+7 (____) ____ - __ - __">
+							<input id="phone" type="text" placeholder="+7 (___) ___-__-__">
 							<input type="email" placeholder="Email">
-							<select>
-								<option value="0">Дети от 4 до 6 лет</option>
-								<option value="1">Дети от 6 до 9 лет</option>
-								<option value="2">Дети от 9 до 15 лет</option>
-								<option value="3">Взрослые</option>
-							</select>
+							<div class="custom-select">
+								<div class="select-trigger">Дети от 4 до 6 лет</div>
+								<ul class="select-options">
+									<li data-value="4-6">Дети от 4 до 6 лет</li>
+									<li data-value="6-9">Дети от 6 до 9 лет</li>
+									<li data-value="9-15">Дети от 9 до 15 лет</li>
+									<li data-value="adult">Взрослые</li>
+								</ul>
+							</div>
 						</div>
 						<div class="btnCheck">
 							<button class="formBtn">Записаться на занятия</button>
@@ -846,132 +851,6 @@
 							</div>
 						</div> -->
 					</div>
-					<!-- <div class="swiper-slide slideItems">
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide slideItems">
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide slideItems">
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-						<div class="item">
-							<video controls>
-								<source src="./videos/swiming.mp4" type="video/mp4" />
-							</video>
-							<div class="playVideobtn">
-								<img src="./images/play.svg" alt="play">
-							</div>
-						</div>
-					</div> -->
 					<div class="swiper-slide slideItems">
 						<div class="item">
 							<video controls>
@@ -1105,55 +984,105 @@
 			<div class="sectionTitle">Команда школы<span class="rotate-text">Pro.Плыть</span></div>
 			<p class="info">Профессионалы своего дела!</p>
 			<div class="swiper teachersSlider">
-				<div class="swiper-wrapper">
+				<div class="swiper-wrapper teach">
 					<div class="swiper-slide sliderItem">
-						<div class="slide">
-							<div class="infoImg">
-								<div class="img"><img src="./images/img01.png" alt="img"></div>
-								<div class="name">Матяж Софья</div>
-								<div class="techInfo">Мастер спорта по синхронному плаванию</div>
-							</div>
-							<a href="#" class="btn">О тренере</a>
+						<div class="infoImg">
+							<div class="img"><img src="./images/img01.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
 						</div>
-						<div class="slide">
-							<div class="infoImg">
-								<div class="img"><img src="./images/img02.png" alt="img"></div>
-								<div class="name">Матяж Софья</div>
-								<div class="techInfo">Мастер спорта по синхронному плаванию</div>
-							</div>
-							<a href="#" class="btn">О тренере</a>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img02.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
 						</div>
-						<div class="slide">
-							<div class="infoImg">
-								<div class="img"><img src="./images/img03.png" alt="img"></div>
-								<div class="name">Матяж Софья</div>
-								<div class="techInfo">Мастер спорта по синхронному плаванию</div>
-							</div>
-							<a href="#" class="btn">О тренере</a>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img03.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
 						</div>
-						<div class="slide">
-							<div class="infoImg">
-								<div class="img"><img src="./images/img04.png" alt="img"></div>
-								<div class="name">Матяж Софья</div>
-								<div class="techInfo">Мастер спорта по синхронному плаванию</div>
-							</div>
-							<a href="#" class="btn">О тренере</a>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img04.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
 						</div>
-						<div class="slide">
-							<div class="infoImg">
-								<div class="img"><img src="./images/img05.png" alt="img"></div>
-								<div class="name">Матяж Софья</div>
-								<div class="techInfo">Мастер спорта по синхронному плаванию</div>
-							</div>
-							<a href="#" class="btn">О тренере</a>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img05.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
 						</div>
-						<div class="slide">
-							<div class="infoImg">
-								<div class="img"><img src="./images/img06.png" alt="img"></div>
-								<div class="name">Матяж Софья</div>
-								<div class="techInfo">Мастер спорта по синхронному плаванию</div>
-							</div>
-							<a href="#" class="btn">О тренере</a>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img06.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
+						</div>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img06.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
+						</div>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img06.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
+						</div>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img06.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
+						</div>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img06.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
+						</div>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+					<div class="swiper-slide sliderItem">
+						<div class="infoImg">
+							<div class="img"><img src="./images/img06.png" alt="img"></div>
+							<div class="name">Матяж Софья</div>
+							<div class="techInfo">Мастер спорта по синхронному плаванию</div>
+						</div>
+						<a href="#" class="btn">О тренере</a>
+					</div>
+				</div>
+				<div class="paginationSlider">
+					<div class="prevNextPagination">
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
+
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"><img class="rightArrow" src="./images/arrowLeftWhite.svg" alt="svg">
+						</div>
+						<div class="swiper-button-next"><img class="rightArrow" src="./images/arrowLeftWhite.svg" alt="svg">
 						</div>
 					</div>
 				</div>
@@ -1161,9 +1090,165 @@
 		</section>
 		<!-- teachers section end  -->
 
+		<!-- gallery section start  -->
+		<section class="gallerySection">
+			<div class="container">
+				<div class="sectionTitle"><span class="rotated-text">Pro.Плыть</span>наша фотогалерея</div>
+				<div class="gallery">
+					<a href="./images/gallery/galleryImg01.png" class="glightbox"><img src="./images/gallery/galleryImg01.png"
+							alt="img"></a>
+					<a href="./images/gallery/galleryImg02.png" class="glightbox"><img src="./images/gallery/galleryImg02.png"
+							alt="img"></a>
+					<a href="./images/gallery/galleryImg03.png" class="glightbox"><img src="./images/gallery/galleryImg03.png"
+							alt="img"></a>
+					<a href="./images/gallery/galleryImg04.png" class="glightbox"><img src="./images/gallery/galleryImg04.png"
+							alt="img"></a>
+					<a href="./images/gallery/galleryImg05.png" class="glightbox"><img src="./images/gallery/galleryImg05.png"
+							alt="img"></a>
+					<a href="./images/gallery/galleryImg06.png" class="glightbox"><img src="./images/gallery/galleryImg06.png"
+							alt="img"></a>
+					<a href="./images/gallery/galleryImg07.png" class="glightbox"><img src="./images/gallery/galleryImg07.png"
+							alt="img"></a>
+					<a href="./images/gallery/galleryImg08.png" class="glightbox"><img src="./images/gallery/galleryImg08.png"
+							alt="img"></a>
+					<a href="./images/gallery/galleryImg09.png" class="glightbox"><img src="./images/gallery/galleryImg09.png"
+							alt="img"></a>
+				</div>
+				<div class="moreImg"><a href="./pages/gallery.html">Смотреть все фотографии</a></div>
+			</div>
+		</section>
+		<!-- gallery section end  -->
+
+		<!-- contact section start  -->
+		<section class="contactPage second" style="padding: 0;">
+			<div class="container">
+				<div class="form">
+					<div class="sectionTitle">Набираем детские группы в <span class="rotate-text">Pro.Плыть</span></div>
+					<form action="#">
+						<div class="formInfoInputs">
+							<input type="text" placeholder="Ваше имя и фамилия">
+							<input id="phone" type="text" placeholder="+7 (___) ___-__-__">
+							<input type="email" placeholder="Email">
+							<div class="custom-select">
+								<div class="select-trigger">Дети от 4 до 6 лет</div>
+								<ul class="select-options">
+									<li data-value="4-6">Дети от 4 до 6 лет</li>
+									<li data-value="6-9">Дети от 6 до 9 лет</li>
+									<li data-value="9-15">Дети от 9 до 15 лет</li>
+									<li data-value="adult">Взрослые</li>
+								</ul>
+							</div>
+						</div>
+						<div class="btnCheck">
+							<button class="formBtn">Записаться на занятия</button>
+							<div class="checkbox">
+								<div class="check01">
+									<input type="radio" name="" id="">
+									<label for="check">Я согласен на обработку <a href="#">персональных данных</a></label>
+								</div>
+								<div class="check01">
+									<input type="radio" name="" id="">
+									<label for="check">Я согласен с условиями <a href="#">пользовательского соглашения</a></label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- contact section end  -->
+
+		<!-- FAQ section start  -->
+		<section class="faqContent">
+			<div class="container">
+				<div class="sectionTitle">Часто задаваемые<span class="rotated-text">вопросы</span></div>
+				<div class="faqItems">
+					<div class="leftContent">
+						<div class="faq-item">
+							<div class="faq-header">
+								<h3>Нужна ли справка для бассейна?</h3>
+								<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+							</div>
+							<div class="faq-content">
+								Для посещения занятий нужна стандартная справка от педиатра о том,
+								что ученику можно посещать бассейн.
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<h3>Сколько человек в группе?</h3>
+								<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+							</div>
+							<div class="faq-content">
+								В группе обычно от 8 до 12 человек.
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<h3>Сколько раз в неделю нужно посещать занятия?</h3>
+								<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+							</div>
+							<div class="faq-content">
+								Рекомендуется посещать занятия 2–3 раза в неделю.
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<h3>Как проходит тренировка в начальной группе?</h3>
+								<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+							</div>
+							<div class="faq-content">
+								Рекомендуется посещать занятия 2–3 раза в неделю.
+							</div>
+						</div>
+					</div>
+					<div class="rightContent">
+						<div class="faq-item">
+							<div class="faq-header">
+								<h3>Сколько человек в группе?</h3>
+								<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+							</div>
+							<div class="faq-content">
+								Рекомендуется посещать занятия 2–3 раза в неделю.
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<h3>Сколько человек в группе?</h3>
+								<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+							</div>
+							<div class="faq-content">
+								Рекомендуется посещать занятия 2–3 раза в неделю.
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<h3>Сколько раз в неделю нужно посещать занятия?</h3>
+								<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+							</div>
+							<div class="faq-content">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, dicta?
+							</div>
+						</div>
+						<div class="faq-item">
+							<div class="faq-header">
+								<h3>Как проходит тренировка в начальной группе?</h3>
+								<span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+							</div>
+							<div class="faq-content">
+								Рекомендуется посещать занятия 2–3 раза в неделю.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- FAQ section end  -->
 
 	</div>
 
+	<script src="https://unpkg.com/imask"></script>
+	<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 	<script src="./script/main.js"></script>
 </body>

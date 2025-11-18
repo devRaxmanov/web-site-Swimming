@@ -65,6 +65,26 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 	videoSwipper()
 
+	function teacherSwipper() {
+		var swiper = new Swiper('.teachersSlider', {
+			slidesPerView: 7,
+			centeredSlides: true,
+			spaceBetween: 20,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		})
+	}
+	teacherSwipper()
 	// sliders js end
 
 	// window scroll down header style js
@@ -126,6 +146,58 @@ window.addEventListener('DOMContentLoaded', () => {
 		checkbox02.classList.toggle('active')
 	})
 
+	// for second contanct page js
+	const checkboxSecond01 = document.querySelector(
+			'.contactPage.second .form form .btnCheck .checkbox .check01 input'
+		),
+		checkboxSecond02 = document.querySelector(
+			'.contactPage.second .form form .btnCheck .checkbox .check01:nth-child(2) input'
+		)
+
+	checkboxSecond01.addEventListener('click', () => {
+		checkboxSecond01.classList.toggle('active')
+	})
+	checkboxSecond02.addEventListener('click', () => {
+		checkboxSecond02.classList.toggle('active')
+	})
+
+	// for input mask js
+	function inputPhoneNumber(nameId) {
+		const phoneInput = document.getElementById(nameId)
+
+		IMask(phoneInput, {
+			mask: '+{7} (000) 000-00-00',
+		})
+	}
+	inputPhoneNumber('phone')
+
+	// for select js
+	function selectOption(perentclass, activeClass, optionClass) {
+		const select = document.querySelector(perentclass)
+		const trigger = select.querySelector(activeClass)
+		const options = select.querySelectorAll(optionClass)
+
+		trigger.addEventListener('click', () => {
+			select.classList.toggle('active')
+		})
+
+		options.forEach(option => {
+			option.addEventListener('click', () => {
+				trigger.textContent = option.textContent
+				select.classList.remove('active')
+			})
+		})
+	}
+	selectOption(
+		'.contactPage .custom-select',
+		'.contactPage .select-trigger',
+		'.contactPage .select-options li'
+	)
+	selectOption(
+		'.contactPage.second .custom-select',
+		'.contactPage.second .select-trigger',
+		'.contactPage.second .select-options li'
+	)
 	// video controls js start
 	const playBtn = document.querySelectorAll('.videoSlider .playVideobtn img'),
 		perentDiv = document.querySelectorAll('.videoSlider .playVideobtn')
@@ -145,4 +217,26 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 	showVideoContent()
+
+	// gallery js start
+	const lightbox = GLightbox({
+		selector: '.glightbox',
+		touchNavigation: true,
+		loop: true,
+	})
+	// gallery js end
+
+	// faqs section js start
+	const faqItems = document.querySelectorAll('.faq-item')
+
+	faqItems.forEach(item => {
+		item.querySelector('.faq-header').addEventListener('click', () => {
+			faqItems.forEach(i => {
+				if (i !== item) i.classList.remove('active')
+			})
+			item.classList.toggle('active')
+		})
+	})
+
+	// faqs section js end
 })
