@@ -85,6 +85,27 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 	teacherSwipper()
+
+	function branchSwipper() {
+		var swiper = new Swiper('.branchContents', {
+			slidesPerView: 4,
+			centeredSlides: true,
+			spaceBetween: 20,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		})
+	}
+	branchSwipper()
 	// sliders js end
 
 	// window scroll down header style js
