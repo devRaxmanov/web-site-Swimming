@@ -21,6 +21,11 @@ window.addEventListener('DOMContentLoaded', () => {
 			scrollbar: {
 				el: '.swiper-scrollbar',
 			},
+
+			autoplay: {
+				delay: 4000, // 3 soniya
+				disableOnInteraction: false, // foydalanuvchi bosganda to‘xtab qolmasin
+			},
 		})
 	}
 	firstSlider()
@@ -219,25 +224,26 @@ window.addEventListener('DOMContentLoaded', () => {
 		'.contactPage.second .select-trigger',
 		'.contactPage.second .select-options li'
 	)
-	// video controls js start
-	const playBtn = document.querySelectorAll('.videoSlider .playVideobtn img'),
-		perentDiv = document.querySelectorAll('.videoSlider .playVideobtn')
 
-	function hideVideoContent() {
-		perentDiv.forEach((item, inx) => {
-			perentDiv[inx].style.display = 'flex'
-		})
-	}
+	// for videoControl js
+	const videos = document.querySelectorAll('.videoSlider video')
+	const items = document.querySelectorAll('.slideItems')
 
-	function showVideoContent() {
-		perentDiv.forEach((item, inx) => {
-			item.addEventListener('click', () => {
-				hideVideoContent()
-				perentDiv[inx].style.display = 'none'
+	items.forEach(item => {
+		const overlay = item.querySelector('.video-overlay')
+		const video = item.querySelector('video')
+
+		overlay.addEventListener('click', () => {
+			videos.forEach(v => {
+				if (v !== video) v.pause()
 			})
+			overlay.style.display = 'none'
+			video.play()
 		})
-	}
-	showVideoContent()
+		video.addEventListener('pause', () => {
+			overlay.style.display = 'flex'
+		})
+	})
 
 	// gallery js start
 	const lightbox = GLightbox({
@@ -258,6 +264,5 @@ window.addEventListener('DOMContentLoaded', () => {
 			item.classList.toggle('active')
 		})
 	})
-
 	// faqs section js end
 })
