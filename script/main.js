@@ -2,29 +2,22 @@ window.addEventListener('DOMContentLoaded', () => {
 	//	sliders js start
 	function firstSlider() {
 		let firstSwipper = new Swiper('.bannerSlider', {
-			// Optional parameters
 			slidesPerView: '1',
 			centeredSlides: true,
 			loop: true,
-			// If we need pagination
 			pagination: {
 				el: '.swiper-pagination',
 			},
-
-			// Navigation arrows
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			},
-
-			// And if we need scrollbar
 			scrollbar: {
 				el: '.swiper-scrollbar',
 			},
-
 			autoplay: {
-				delay: 4000, // 3 soniya
-				disableOnInteraction: false, // foydalanuvchi bosganda to‘xtab qolmasin
+				delay: 4000,
+				disableOnInteraction: false,
 			},
 		})
 	}
@@ -265,4 +258,27 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 	// faqs section js end
+
+	// animation js
+	function animationContent(items) {
+		const observer = new IntersectionObserver(
+			entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('show')
+					}
+				})
+			},
+			{
+				threshold: 0.2,
+			}
+		)
+
+		items.forEach(item => observer.observe(item))
+	}
+	const animationContents = document.querySelectorAll('.services .content'),
+		categoryAnimation = document.querySelectorAll('.category .item')
+
+	animationContent(animationContents)
+	animationContent(categoryAnimation)
 })
