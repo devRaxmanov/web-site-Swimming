@@ -1,4 +1,21 @@
 window.addEventListener('DOMContentLoaded', () => {
+	// loader js start
+	const loader = document.querySelector('.loader'),
+		galeryPage = document.querySelector('.gallerySection .moreImg a')
+
+	function loaderContent() {
+		window.addEventListener('load', function () {
+			setTimeout(() => {
+				loader.style.opacity = '0'
+
+				setTimeout(() => {
+					loader.style.display = 'none'
+				}, 300)
+			}, 2000)
+		})
+	}
+	loaderContent()
+
 	//	sliders js start
 	function firstSlider() {
 		let firstSwipper = new Swiper('.bannerSlider', {

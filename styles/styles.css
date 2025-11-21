@@ -4,9 +4,87 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.loader {
+  transition: all 0.4s ease;
+  position: fixed;
+  z-index: 99999;
+  display: flex;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: #183153;
+}
+.loader h3 {
+  opacity: 1;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  animation: opacityFade 3s linear infinite;
+}
+.loader .loaderContent {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.loader .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-left: 2px dotted yellow;
+  border-top: 3px dotted yellow;
+  border-right: 2px dotted #183153;
+  animation: loaderShade 1s linear infinite;
+}
+.loader .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.loader .icon i {
+  color: yellow;
+  font-size: 30px;
+}
+@keyframes loaderShade {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes opacityFade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapper {
@@ -26,6 +104,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 53px;
+  z-index: 999;
 }
 .sectionTitle span.rotated-text {
   color: var(--white, #fff);
@@ -2362,7 +2441,7 @@ header.sticky {
   justify-content: space-between;
 }
 .vacancy .vacancyContent .vacancyCategory {
-  padding: 40px;
+  padding: 40px 40px 40px 88px;
   flex: 0 0 48%;
 }
 .vacancy .vacancyContent .vacancyCategory ul.list {
@@ -2409,14 +2488,29 @@ header.sticky {
   text-transform: uppercase;
 }
 .vacancy .vacancyContent .image {
-  overflow: hidden;
-  border-radius: 40px;
+  z-index: 2;
+  position: relative;
   flex: 0 0 48%;
 }
 .vacancy .vacancyContent .image img {
+  z-index: 99;
+  border-radius: 40px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.vacancy .vacancyContent .image::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -93px;
+  width: 312.379px;
+  height: 312.379px;
+  flex-shrink: 0;
+  border-radius: 312.379px;
+  background: var(--lasure, #00c9c5);
+  filter: blur(75px);
+  z-index: -1;
 }
 
 .vacancy::after {
@@ -2469,8 +2563,8 @@ header.sticky {
   padding: 30px 0;
   display: flex;
   align-items: center;
-  gap: 50px;
-  justify-content: space-between;
+  gap: 100px;
+  justify-content: center;
 }
 .networks .networksContent .leftInfo {
   display: flex;
@@ -2478,6 +2572,7 @@ header.sticky {
   gap: 20px;
   align-self: stretch;
   flex: 0 0 47%;
+  justify-content: flex-end;
 }
 .networks .networksContent .leftInfo .leftItem {
   display: flex;
@@ -2520,7 +2615,7 @@ header.sticky {
   flex: 0 0 47%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .networks .networksContent .rightInfo ul.list li {
   margin-bottom: 29px;
