@@ -1,10 +1,22 @@
-@media (min-width: 1920px) {
+@media (max-width: 1920px) {
+	.mobileMenu .openBtn {
+		display: none;
+	}
 	.container {
 		width: 60%;
 		margin: 0 auto;
 	}
+	.phoneIcon {
+		display: none;
+	}
 }
-@media (min-width: 1440px) {
+@media (max-width: 1700px) {
+	.container {
+		width: 75%;
+		margin: 0 auto;
+	}
+}
+@media (max-width: 1440px) {
 	.container {
 		width: 80%;
 		margin: 0 auto;
@@ -15,11 +27,211 @@
 		width: 80%;
 		margin: 0 auto;
 	}
+	.sectionTitle {
+		font-size: 48px;
+	}
+	.sectionTitle span.rotated-text {
+		font-size: 48px;
+	}
+	.animationLineSecond {
+		margin-top: -36px;
+	}
+	.animationLineSecond .firstLine .item {
+		font-size: 14px;
+	}
+	.animationLineFirts .firstLine .item {
+		font-size: 14px;
+	}
+	header .header .logoNavbar {
+		flex: 0 0 70%;
+	}
+	header .header .logoNavbar .nav ul li a {
+		font-size: 14px;
+	}
+	header .header .contact .numberPhone a {
+		padding: 15px 10px;
+		font-size: 14px;
+	}
+	header .header .contact .socialNetworks ul li {
+		margin-right: 5px;
+	}
+	header .header .contact .socialNetworks ul li:last-child {
+		margin-right: 0;
+	}
+	.mobileMenu .openBtn {
+		display: none;
+	}
+
+	/* banner section responsive start */
+	.banner .swiper-slide img {
+		width: 100%;
+		object-fit: cover;
+		height: 100%;
+	}
+	.banner .container {
+		width: 80%;
+		margin-left: 10%;
+		position: absolute;
+		top: 193px;
+		left: 0;
+		z-index: 998;
+	}
+	.banner .container .bannerTitle h2 {
+		font-size: 48px;
+	}
+	.banner .container .bannerTitle p {
+		font-size: 24px;
+	}
+	.banner .container .bannerCard .cartTitle {
+		font-size: 18px;
+	}
+	.banner .container .bannerCard ul li {
+		font-size: 14px;
+	}
+	.banner .container .bannerCard .cardBtn a {
+		font-size: 14px;
+		padding: 10px 15px;
+	}
+	/* banner section responsive end */
+
+	/* AboutUs section responsive start  */
+	.aboutUs::after {
+		top: 160px;
+	}
+	.aboutUs::before {
+		top: 170px;
+	}
+	.aboutUs .aboutCard .cardItem .cardTitile {
+		font-size: 16px;
+	}
+	.aboutUs .aboutCard .cardItem p {
+		font-size: 14px;
+	}
+	.aboutUs .resultIndicator .indecatorItem .icrNumber {
+		font-size: 28px;
+	}
+	.aboutUs .resultIndicator .indecatorItem .icrInfo {
+		font-size: 14px;
+	}
+	/* AboutUs section responsive end  */
+
+	/* services section responsive start  */
+	.services .info {
+		font-size: 28px;
+	}
+	.services .contents .content .contentTitleImg .title {
+		font-size: 18px;
+	}
+	.services .contents .content .contentTitleImg .img img {
+		width: 80%;
+	}
+	.services .contents .content ul.list li {
+		font-size: 14px;
+	}
+	/* services section responsive end  */
+
+	/* category section responsiv start */
+	.category .categories {
+		gap: 10px;
+	}
+	.category .categories .item {
+		flex: 0 0 19%;
+	}
+	.category .categories .item .title {
+		font-size: 14px;
+	}
+	.category .categories .item .itemInfo {
+		font-size: 12px;
+	}
+
+	/* category section responsive end  */
+
+	/* sorting section responsive start  */
+	.sorting .info {
+		font-size: 24px;
+	}
+	.sorting .tabs .tabBtn {
+		font-size: 14px;
+	}
+	.sorting .tabContents .item .priceInfoBtn .cardbtn {
+		flex: 0 0 33%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	.sorting .tabContents .item .priceInfoBtn .img {
+		flex: 0 0 30%;
+	}
+	.sorting .tabContents .item .priceInfoBtn .img img {
+		width: 100%;
+		object-fit: cover;
+	}
+	.cardbtn a {
+		font-size: 14px;
+		padding: 15px 20px;
+	}
+	.sorting .tabContents .item .imgInfoPage .contentInfo .title {
+		font-size: 24px;
+	}
+	.sorting .tabContents .item .priceInfoBtn .priceInfo {
+		font-size: 28px;
+		flex: 0 0 33%;
+	}
+	.sorting .tabContents .item .imgInfoPage .contentInfo ul li {
+		font-size: 14px;
+	}
+	.sorting .tabContents .item .priceInfoBtn .img {
+		flex: 0 0 25%;
+		width: 80%;
+	}
 }
 @media (max-width: 1200px) {
 	.container {
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
+	}
+	header .header .contact .numberPhone a {
+		margin-left: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+	}
+	header .phoneIcon {
+		display: block;
+	}
+	header .number {
+		display: none;
+	}
+	header .header .contact .socialNetworks ul {
+		align-items: stretch;
+	}
+	header .header .contact .socialNetworks ul li {
+		margin-right: 10px;
+	}
+	header .header .contact .socialNetworks ul li:nth-child(2) a {
+		width: 34px;
+		height: 34px;
+	}
+	header .header .contact .socialNetworks ul li img {
+		width: 34px;
+		height: 34px;
+	}
+
+	.banner .container .slogan {
+		font-size: 30px;
+	}
+	header .header .logoNavbar {
+		flex: 0 0 80%;
+	}
+	header .header .logoNavbar .logo {
+		flex: 0 0 5%;
+	}
+	.category .categories .item {
+		flex: 0 0 22%;
 	}
 }
 @media (max-width: 992px) {
@@ -27,17 +239,282 @@
 		width: 80%;
 		margin: 0 auto;
 	}
+	header .header .logoNavbar {
+		flex: 0 0 30%;
+	}
+	header .header .logoNavbar .nav {
+		display: none;
+	}
+	header .mobileMenu .openBtn {
+		padding: 5px;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		background: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 15px;
+	}
+	header .phoneIcon {
+		display: none;
+	}
+	header .number {
+		display: block;
+	}
+	header .header .contact .numberPhone a {
+		width: 243px;
+		height: 34px;
+		border-radius: 60px;
+	}
+	.aboutUs .aboutCard {
+		flex-wrap: wrap;
+	}
+	.aboutUs .aboutCard .cardItem {
+		flex: 0 0 100%;
+		height: auto;
+	}
+	.aboutUs .aboutCard .cardItem:nth-child(2) {
+		height: 376px;
+		flex: 0 0 100%;
+	}
+	.services .contents .content {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.services .contents .content:nth-child(2),
+	.services .contents .content:nth-child(6) {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.services .contents .content:nth-child(3) {
+		order: 4;
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+	.services .contents .content:nth-child(4) {
+		order: 3;
+	}
+	.category .categories .item {
+		flex: 0 0 30%;
+	}
 }
 @media (max-width: 768px) {
-	/* Kodlar shu yerga */
+	.container {
+		width: 90%;
+	}
+	.sectionTitle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		font-size: 36px;
+	}
+	.sectionTitle span.rotated-text {
+		font-size: 36px;
+	}
+	header {
+		padding: 10px 20px;
+	}
+	header .header .logoNavbar .nav {
+		display: none;
+	}
+	header .mobileMenu .openBtn {
+		padding: 5px;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		background: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 15px;
+	}
+	header .logo {
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		background: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+	}
+	header .logo img {
+		width: 55px;
+		height: 55px;
+		object-fit: cover;
+	}
+	header .header .logoNavbar {
+		flex: 0 0 24.5%;
+	}
+	header .header .contact .socialNetworks ul {
+		align-items: stretch;
+	}
+	header .header .contact .socialNetworks ul li {
+		margin-right: 10px;
+	}
+	header .header .contact .socialNetworks ul li:nth-child(2) a {
+		width: 34px;
+		height: 34px;
+	}
+	header .header .contact .socialNetworks ul li img {
+		width: 34px;
+		height: 34px;
+	}
+	header .header .contact .numberPhone a {
+		margin-left: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+	}
+	header .header .contact .numberPhone a .number {
+		display: none;
+	}
+	header .phoneIcon {
+		display: block;
+	}
+	.banner {
+		height: 120vh;
+		overflow: hidden;
+	}
+	.banner .container {
+		width: 90%;
+		position: absolute;
+		top: 110px;
+		left: -20px;
+	}
+	.banner .container .bannerTitle h2 {
+		font-size: 30px;
+	}
+	.banner .container .bannerTitle p {
+		font-size: 20px;
+	}
+	.banner .container .bannerCard {
+		width: 100%;
+	}
+	.banner .container .bannerCard {
+		padding: 20px;
+	}
+	.banner .container .bannerCard .cartTitle {
+		font-size: 20px;
+	}
+	.banner .container .bannerCard ul li {
+		font-style: normal;
+		font-weight: 500;
+		line-height: 120%;
+		font-size: 16px;
+	}
+
+	.banner .container .slogan {
+		font-size: 20px;
+		bottom: -60px;
+	}
+	.banner .swiper.bannerSlider .paginationSlider .swiper-pagination {
+		width: 150px;
+	}
+	.banner .swiper.bannerSlider .paginationSlider {
+		width: 100%;
+		z-index: 9999;
+		position: absolute;
+		bottom: 180px;
+		left: 5%;
+	}
+	.banner .swiper.bannerSlider .paginationSlider .swiper-button-next {
+		transform: translate(280px, -40px);
+	}
+	.aboutUs .resultIndicator {
+		flex-wrap: wrap;
+	}
+	.aboutUs .resultIndicator .indecatorItem {
+		height: 100px;
+		border-bottom: 1px solid var(--lasure, #00c9c5);
+		flex: 0 0 48%;
+		border-right: none;
+	}
+	.aboutUs .resultIndicator .indecatorItem:nth-child(3),
+	.aboutUs .resultIndicator .indecatorItem:nth-child(4) {
+		border-bottom: none;
+	}
+	.category .categories .item {
+		overflow: hidden;
+		padding: 15px;
+		flex: 0 0 48%;
+		border-radius: 30px;
+	}
+	.category .categories .item img {
+		width: 54px;
+		height: 54px;
+	}
+	.sorting .tabs {
+		flex-wrap: wrap;
+	}
+	.sorting .tabs .tabBtn {
+		flex: 0 0 48%;
+	}
+	.sorting .tabContents .item .imgInfoPage {
+		flex-direction: column;
+	}
+	.sorting .tabContents .item .imgInfoPage .contentImg {
+		order: 2;
+		flex: 0 0 100%;
+		width: 100%;
+		margin-top: 25px;
+	}
+	.sorting .tabContents .item .priceInfoBtn .img {
+		display: none;
+	}
+	.sorting .tabContents .item .priceInfoBtn .priceInfo {
+		flex: 0 0 48%;
+	}
+
+	.sorting .tabContents .item .priceInfoBtn .cardBtn {
+		flex: 0 0 48%;
+	}
+	.sorting .tabContents .item .priceInfoBtn .cardbtn {
+		flex: 0 0 48%;
+	}
+	.contactPage .form form .formInfoInputs {
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.contactPage .form form .formInfoInputs input {
+		margin-bottom: 15px;
+		flex: 0 0 45%;
+	}
+	.contactPage .form form .select-trigger {
+		flex: 0 0 45%;
+		max-width: 246.6px;
+	}
+	.contactPage .form form .custom-select {
+		width: 260px;
+		position: relative;
+		font-family: sans-serif;
+	}
 }
 @media (max-width: 576px) {
-	/* Kodlar shu yerga */
+	.sectionTitle {
+		font-size: 24px;
+	}
+	.sectionTitle span.rotated-text {
+		font-size: 24px;
+	}
+	.sorting .tabContents {
+		margin-top: 20px;
+	}
 }
 
 @media (max-width: 480px) {
-	/* Kodlar shu yerga */
+	.sectionTitle span.rotated-text {
+		font-size: 36px;
+		display: inline-block;
+		width: 100%;
+	}
 }
 @media (max-width: 390px) {
-	/* Kodlar shu yerga */
 }

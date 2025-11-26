@@ -104,7 +104,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 53px;
-	z-index: 999;
+	z-index: 99;
 	span.rotated-text {
 		color: var(--white, #fff);
 		text-align: center;
@@ -163,29 +163,30 @@ body {
 }
 
 // animation line style start
-@keyframes waveMove {
+@keyframes flipWave {
 	0% {
-		transform: translateX(0);
+		transform: rotateX(0deg);
 	}
 	50% {
-		transform: translateX(-40px);
+		transform: rotateX(180deg);
 	}
 	100% {
-		transform: translateX(0);
+		transform: rotateX(360deg);
 	}
 }
-@keyframes waveMove02 {
+@keyframes flipWave02 {
 	0% {
-		transform: translateX(0);
+		transform: rotateX(360deg);
 	}
 	50% {
-		transform: translateX(40px);
+		transform: rotateX(180deg);
 	}
 	100% {
-		transform: translateX(0);
+		transform: rotateX(0deg);
 	}
 }
 // animation line style end
+
 //header section style start
 header {
 	width: 95%;
@@ -540,6 +541,23 @@ header.sticky {
 				}
 			}
 		}
+		.slogan {
+			position: absolute;
+			bottom: -130px;
+			right: 100px;
+			color: var(--white, #fff);
+			font-variant-numeric: lining-nums proportional-nums;
+			font-family: Rumpelstiltskin;
+			font-size: 48px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			span {
+				position: relative;
+				transform: translateX(100px);
+				display: block;
+			}
+		}
 	}
 }
 // banner section style end
@@ -652,14 +670,14 @@ header.sticky {
 	top: 175px;
 	left: 0;
 	width: 100%;
-	height: 35.778px;
+	height: 36px;
 	background: url('../images/curveFirst.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove 2s linear infinite;
+	animation: flipWave 3s linear infinite;
 }
 .aboutUs::before {
 	content: '';
@@ -667,14 +685,15 @@ header.sticky {
 	top: 185px;
 	left: 0;
 	width: 100%;
-	height: 35.778px;
+	height: 36px;
 	background: url('../images/curve.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove02 2s linear infinite;
+	transform: rotateX(360deg);
+	animation: flipWave02 2s linear infinite;
 }
 // about section style and
 
@@ -705,10 +724,14 @@ header.sticky {
 		position: relative;
 		display: flex;
 		align-items: stretch;
-		justify-content: space-between;
 		flex-wrap: wrap;
+		justify-content: space-between;
+		align-self: stretch;
 		gap: 30px;
 		.content {
+			overflow: hidden;
+			max-width: 565px;
+			max-height: 484px;
 			position: relative;
 			transform: translateX(-60px);
 			opacity: 0;
@@ -819,41 +842,32 @@ header.sticky {
 			overflow: hidden;
 			padding: 0;
 			border-radius: 40px;
-			border: 1px solid var(--white, #fff);
-			background: linear-gradient(
-				109deg,
-				#fff 0%,
-				rgba(255, 255, 255, 0) 100%
-			);
 			box-shadow: 0 4px 72px 0 rgba(0, 201, 197, 0.25);
 			flex: 0 0 48.5%;
-			background: url('../images/serviesesImg01.png');
-			background-repeat: no-repeat;
-			background-size: cover;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 		.content:nth-child(3) {
 			transform: translateX(-60px);
 			overflow: hidden;
 			padding: 0;
 			border-radius: 40px;
-			border: 1px solid var(--white, #fff);
-			background: linear-gradient(
-				109deg,
-				#fff 0%,
-				rgba(255, 255, 255, 0) 100%
-			);
 			box-shadow: 0 4px 72px 0 rgba(0, 201, 197, 0.25);
 			flex: 0 0 48.5%;
-			background: url('../images/serviesesImg02.png');
-			background-repeat: no-repeat;
-			background-size: cover;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 		.content:nth-child(6) {
 			transform: translateX(60px);
 			overflow: hidden;
 			padding: 0;
 			border-radius: 40px;
-			border: 1px solid var(--white, #fff);
 			background: linear-gradient(
 				109deg,
 				#fff 0%,
@@ -861,10 +875,11 @@ header.sticky {
 			);
 			box-shadow: 0 4px 72px 0 rgba(0, 201, 197, 0.25);
 			flex: 0 0 48.5%;
-			background: url('../images/serviesesImg03.png');
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 		.content.show {
 			display: flex;
@@ -983,7 +998,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3s linear infinite;
 }
 .category::before {
 	content: '';
@@ -995,10 +1011,11 @@ header.sticky {
 	background: url('../images/curveWhite.png');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove02 4s linear infinite;
+	animation: flipWave 3.5s linear infinite;
 }
 // category section style end
 
@@ -1237,6 +1254,8 @@ header.sticky {
 				align-items: center;
 				justify-content: space-between;
 				input {
+					max-width: 246.6px;
+					height: 59px;
 					outline: none;
 					border: none;
 					display: block;
@@ -1273,6 +1292,8 @@ header.sticky {
 			}
 
 			.select-trigger {
+				height: 59px;
+				max-width: 246.6px;
 				color: var(--darkblack, #333);
 				font-variant-numeric: lining-nums proportional-nums;
 				font-family: Montserrat;
@@ -1287,7 +1308,7 @@ header.sticky {
 			}
 
 			.select-options {
-				width: 100%;
+				max-width: 246.6px;
 				position: absolute;
 				top: 50px;
 				left: 0;
@@ -1528,7 +1549,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3s linear infinite;
 }
 .reviews::before {
 	content: '';
@@ -1543,7 +1565,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove02 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3.5s linear infinite;
 }
 // reviews section style end
 
@@ -1826,9 +1849,11 @@ header.sticky {
 					object-fit: cover;
 				}
 				img:last-child {
+					width: 96px;
+					height: 96px;
 					position: absolute;
-					top: calc(50% - 30px);
-					left: calc(50% - 30px);
+					top: calc(50% - 48px);
+					left: calc(50% - 48px);
 					object-fit: cover;
 					z-index: 2;
 				}
@@ -2151,7 +2176,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3.5s linear infinite;
 }
 .gallerySection::before {
 	content: '';
@@ -2166,7 +2192,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove02 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3s linear infinite;
 }
 // gallery section style end
 
@@ -2279,7 +2306,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3s linear infinite;
 }
 .faqContent::before {
 	content: '';
@@ -2294,7 +2322,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove02 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3.5s linear infinite;
 }
 // FAQ section style end
 
@@ -2712,7 +2741,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3s linear infinite;
 }
 .networks::before {
 	content: '';
@@ -2727,7 +2757,8 @@ header.sticky {
 	fill: none;
 	stroke: #00b5b5;
 	stroke-width: 3px;
-	animation: waveMove02 4s linear infinite;
+	background-position: center;
+	animation: flipWave 3.5s linear infinite;
 }
 // networks section style start
 

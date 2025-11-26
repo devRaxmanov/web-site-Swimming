@@ -104,7 +104,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 53px;
-  z-index: 999;
+  z-index: 99;
 }
 .sectionTitle span.rotated-text {
   color: var(--white, #fff);
@@ -164,26 +164,26 @@ body {
     opacity: 1;
   }
 }
-@keyframes waveMove {
+@keyframes flipWave {
   0% {
-    transform: translateX(0);
+    transform: rotateX(0deg);
   }
   50% {
-    transform: translateX(-40px);
+    transform: rotateX(180deg);
   }
   100% {
-    transform: translateX(0);
+    transform: rotateX(360deg);
   }
 }
-@keyframes waveMove02 {
+@keyframes flipWave02 {
   0% {
-    transform: translateX(0);
+    transform: rotateX(360deg);
   }
   50% {
-    transform: translateX(40px);
+    transform: rotateX(180deg);
   }
   100% {
-    transform: translateX(0);
+    transform: rotateX(0deg);
   }
 }
 header {
@@ -530,6 +530,23 @@ header.sticky {
   gap: 10px;
   align-self: stretch;
 }
+.banner .container .slogan {
+  position: absolute;
+  bottom: -130px;
+  right: 100px;
+  color: var(--white, #fff);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Rumpelstiltskin;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.banner .container .slogan span {
+  position: relative;
+  transform: translateX(100px);
+  display: block;
+}
 
 .aboutUs {
   position: relative;
@@ -637,14 +654,14 @@ header.sticky {
   top: 175px;
   left: 0;
   width: 100%;
-  height: 35.778px;
+  height: 36px;
   background: url("../images/curveFirst.png");
   background-size: cover;
   background-repeat: no-repeat;
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove 2s linear infinite;
+  animation: flipWave 3s linear infinite;
 }
 
 .aboutUs::before {
@@ -653,14 +670,15 @@ header.sticky {
   top: 185px;
   left: 0;
   width: 100%;
-  height: 35.778px;
+  height: 36px;
   background: url("../images/curve.png");
   background-size: cover;
   background-repeat: no-repeat;
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove02 2s linear infinite;
+  transform: rotateX(360deg);
+  animation: flipWave02 2s linear infinite;
 }
 
 .services {
@@ -690,11 +708,15 @@ header.sticky {
   position: relative;
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-self: stretch;
   gap: 30px;
 }
 .services .contents .content {
+  overflow: hidden;
+  max-width: 565px;
+  max-height: 484px;
   position: relative;
   transform: translateX(-60px);
   opacity: 0;
@@ -795,40 +817,43 @@ header.sticky {
   overflow: hidden;
   padding: 0;
   border-radius: 40px;
-  border: 1px solid var(--white, #fff);
-  background: linear-gradient(109deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0 4px 72px 0 rgba(0, 201, 197, 0.25);
   flex: 0 0 48.5%;
-  background: url("../images/serviesesImg01.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+.services .contents .content:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .services .contents .content:nth-child(3) {
   transform: translateX(-60px);
   overflow: hidden;
   padding: 0;
   border-radius: 40px;
-  border: 1px solid var(--white, #fff);
-  background: linear-gradient(109deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0 4px 72px 0 rgba(0, 201, 197, 0.25);
   flex: 0 0 48.5%;
-  background: url("../images/serviesesImg02.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+.services .contents .content:nth-child(3) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .services .contents .content:nth-child(6) {
   transform: translateX(60px);
   overflow: hidden;
   padding: 0;
   border-radius: 40px;
-  border: 1px solid var(--white, #fff);
   background: linear-gradient(109deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0 4px 72px 0 rgba(0, 201, 197, 0.25);
   flex: 0 0 48.5%;
-  background: url("../images/serviesesImg03.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+.services .contents .content:nth-child(6) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .services .contents .content.show {
   display: flex;
@@ -945,7 +970,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3s linear infinite;
 }
 
 .category::before {
@@ -958,10 +984,11 @@ header.sticky {
   background: url("../images/curveWhite.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove02 4s linear infinite;
+  animation: flipWave 3.5s linear infinite;
 }
 
 .sorting {
@@ -1196,6 +1223,8 @@ header.sticky {
   justify-content: space-between;
 }
 .contactPage .form form .formInfoInputs input {
+  max-width: 246.6px;
+  height: 59px;
   outline: none;
   border: none;
   display: block;
@@ -1248,6 +1277,8 @@ header.sticky {
   font-family: sans-serif;
 }
 .contactPage .form form .select-trigger {
+  height: 59px;
+  max-width: 246.6px;
   color: var(--darkblack, #333);
   font-variant-numeric: lining-nums proportional-nums;
   font-family: Montserrat;
@@ -1261,7 +1292,7 @@ header.sticky {
   cursor: pointer;
 }
 .contactPage .form form .select-options {
-  width: 100%;
+  max-width: 246.6px;
   position: absolute;
   top: 50px;
   left: 0;
@@ -1500,7 +1531,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3s linear infinite;
 }
 
 .reviews::before {
@@ -1516,7 +1548,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove02 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3.5s linear infinite;
 }
 
 .swiper.secondSwiper {
@@ -1793,9 +1826,11 @@ header.sticky {
      object-fit: cover;
 }
 .videoSlider .swiper.videoSwiper .swiper-slide.slideItems .video-overlay img:last-child {
+  width: 96px;
+  height: 96px;
   position: absolute;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
+  top: calc(50% - 48px);
+  left: calc(50% - 48px);
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 2;
@@ -2112,7 +2147,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3.5s linear infinite;
 }
 
 .gallerySection::before {
@@ -2128,7 +2164,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove02 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3s linear infinite;
 }
 
 .faqContent {
@@ -2233,7 +2270,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3s linear infinite;
 }
 
 .faqContent::before {
@@ -2249,7 +2287,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove02 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3.5s linear infinite;
 }
 
 .branches .sectionTitle {
@@ -2658,7 +2697,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3s linear infinite;
 }
 
 .networks::before {
@@ -2674,7 +2714,8 @@ header.sticky {
   fill: none;
   stroke: #00b5b5;
   stroke-width: 3px;
-  animation: waveMove02 4s linear infinite;
+  background-position: center;
+  animation: flipWave 3.5s linear infinite;
 }
 
 .map {

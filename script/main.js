@@ -22,6 +22,42 @@ window.addEventListener('DOMContentLoaded', () => {
 			slidesPerView: '1',
 			centeredSlides: true,
 			loop: true,
+			breakpoints: {
+				// >>> 360px dan katta ekranlar
+				360: {
+					slidesPerView: 1,
+				},
+
+				// >>> 480px dan katta ekranlar
+				480: {
+					slidesPerView: 1,
+				},
+
+				// >>> 640px dan katta ekranlar
+				640: {
+					slidesPerView: 1,
+				},
+
+				// >>> 768px dan katta ekranlar
+				768: {
+					slidesPerView: 1,
+				},
+
+				// >>> 1024px dan katta ekranlar
+				1024: {
+					slidesPerView: 1,
+				},
+
+				// >>> 1280px dan katta ekranlar
+				1280: {
+					slidesPerView: 1,
+				},
+
+				// >>> 1536px dan katta ekranlar
+				1536: {
+					slidesPerView: 1,
+				},
+			},
 			pagination: {
 				el: '.swiper-pagination',
 			},
@@ -45,6 +81,49 @@ window.addEventListener('DOMContentLoaded', () => {
 			centeredSlides: true,
 			spaceBetween: 20,
 			loop: true,
+			breakpoints: {
+				// >>> 360px dan katta ekranlar
+				360: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+				},
+
+				// >>> 480px dan katta ekranlar
+				480: {
+					slidesPerView: 1.1,
+					spaceBetween: 20,
+				},
+
+				// >>> 640px dan katta ekranlar
+				640: {
+					slidesPerView: 1.1,
+					spaceBetween: 20,
+				},
+
+				// >>> 768px dan katta ekranlar
+				768: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+				},
+
+				// >>> 1024px dan katta ekranlar
+				1024: {
+					slidesPerView: 1.5,
+					spaceBetween: 20,
+				},
+
+				// >>> 1280px dan katta ekranlar
+				1280: {
+					slidesPerView: 1.8,
+					spaceBetween: 20,
+				},
+
+				// >>> 1536px dan katta ekranlar
+				1536: {
+					slidesPerView: 2.8,
+					spaceBetween: 20,
+				},
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -65,6 +144,53 @@ window.addEventListener('DOMContentLoaded', () => {
 			centeredSlides: true,
 			spaceBetween: 20,
 			loop: true,
+			breakpoints: {
+				// >>> 360px dan katta ekranlar
+				360: {
+					slidesPerView: 1.6,
+					spaceBetween: 10,
+				},
+				// >>> 400px dan katta ekranlar
+				400: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				// >>> 480px dan katta ekranlar
+				480: {
+					slidesPerView: 2.6,
+					spaceBetween: 10,
+				},
+
+				// >>> 640px dan katta ekranlar
+				640: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+
+				// >>> 768px dan katta ekranlar
+				768: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+
+				// >>> 1024px dan katta ekranlar
+				1024: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+
+				// >>> 1280px dan katta ekranlar
+				1280: {
+					slidesPerView: 6,
+					spaceBetween: 20,
+				},
+
+				// >>> 1536px dan katta ekranlar
+				1536: {
+					slidesPerView: 6.8,
+					spaceBetween: 20,
+				},
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -86,6 +212,53 @@ window.addEventListener('DOMContentLoaded', () => {
 			centeredSlides: true,
 			spaceBetween: 20,
 			loop: true,
+			breakpoints: {
+				// >>> 360px dan katta ekranlar
+				360: {
+					slidesPerView: 1.6,
+					spaceBetween: 10,
+				},
+				// >>> 400px dan katta ekranlar
+				400: {
+					slidesPerView: 1.6,
+					spaceBetween: 10,
+				},
+				// >>> 480px dan katta ekranlar
+				480: {
+					slidesPerView: 2.6,
+					spaceBetween: 10,
+				},
+
+				// >>> 640px dan katta ekranlar
+				640: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+
+				// >>> 768px dan katta ekranlar
+				768: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+
+				// >>> 1024px dan katta ekranlar
+				1024: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+
+				// >>> 1280px dan katta ekranlar
+				1280: {
+					slidesPerView: 6,
+					spaceBetween: 20,
+				},
+
+				// >>> 1536px dan katta ekranlar
+				1536: {
+					slidesPerView: 7.4,
+					spaceBetween: 20,
+				},
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -107,6 +280,49 @@ window.addEventListener('DOMContentLoaded', () => {
 			centeredSlides: true,
 			spaceBetween: 20,
 			loop: true,
+			breakpoints: {
+				// >>> 360px dan katta ekranlar
+				360: {
+					slidesPerView: 1.2,
+					spaceBetween: 20,
+				},
+
+				// >>> 480px dan katta ekranlar
+				480: {
+					slidesPerView: 1.4,
+					spaceBetween: 10,
+				},
+
+				// >>> 640px dan katta ekranlar
+				640: {
+					slidesPerView: 1.8,
+					spaceBetween: 20,
+				},
+
+				// >>> 768px dan katta ekranlar
+				768: {
+					slidesPerView: 2.2,
+					spaceBetween: 20,
+				},
+
+				// >>> 1024px dan katta ekranlar
+				1024: {
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+
+				// >>> 1280px dan katta ekranlar
+				1280: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+
+				// >>> 1536px dan katta ekranlar
+				1536: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
