@@ -239,6 +239,10 @@
 		width: 80%;
 		margin: 0 auto;
 	}
+	.sectionTitle {
+		font-size: 36px;
+	}
+
 	header .header .logoNavbar {
 		flex: 0 0 30%;
 	}
@@ -297,6 +301,35 @@
 	}
 	.category .categories .item {
 		flex: 0 0 30%;
+	}
+	.gallerySection .gallery img {
+		border-radius: 30px;
+	}
+	.contactPage .form .sectionTitle {
+		font-size: 24px;
+	}
+	.contactPage .form form .formInfoInputs {
+		flex-wrap: wrap;
+	}
+	.contactPage .form form .formInfoInputs input {
+		flex: 0 0 48%;
+		max-width: 100%;
+	}
+	.contactPage .form form .formInfoInputs input:nth-child(1) {
+		margin-bottom: 20px;
+	}
+	.contactPage .form form .formInfoInputs input:nth-child(2) {
+		margin-bottom: 20px;
+	}
+	.contactPage .form form .custom-select {
+		flex: 0 0 48%;
+		max-width: 100%;
+	}
+	.contactPage .form form .select-trigger {
+		max-width: 100%;
+	}
+	.contactPage .form form .btnCheck .formBtn {
+		font-size: 14px;
 	}
 }
 @media (max-width: 768px) {
@@ -427,8 +460,12 @@
 	.banner .swiper.bannerSlider .paginationSlider .swiper-button-next {
 		transform: translate(280px, -40px);
 	}
+	.aboutUs {
+		padding-top: 40px;
+	}
 	.aboutUs .resultIndicator {
 		flex-wrap: wrap;
+		border-radius: 30px;
 	}
 	.aboutUs .resultIndicator .indecatorItem {
 		height: 100px;
@@ -440,6 +477,29 @@
 	.aboutUs .resultIndicator .indecatorItem:nth-child(4) {
 		border-bottom: none;
 	}
+	.aboutUs .aboutCard .cardItem {
+		border-radius: 30px;
+	}
+	.services::before {
+		height: 27px;
+		bottom: -25px;
+	}
+	.services::after {
+		height: 27px;
+		top: -25px;
+	}
+	.services .contents .content.show {
+		border-radius: 30px;
+	}
+	.category::before {
+		top: 170px;
+	}
+	.category::after {
+		top: 165px;
+	}
+	.category {
+		padding: 50px 0;
+	}
 	.category .categories .item {
 		overflow: hidden;
 		padding: 15px;
@@ -449,6 +509,14 @@
 	.category .categories .item img {
 		width: 54px;
 		height: 54px;
+	}
+	.sorting::after {
+		height: 27px;
+		top: -25px;
+	}
+	.sorting::before {
+		height: 27px;
+		bottom: -25px;
 	}
 	.sorting .tabs {
 		flex-wrap: wrap;
@@ -481,7 +549,7 @@
 	.contactPage .form form .formInfoInputs {
 		justify-content: space-between;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: stretch;
 	}
 	.contactPage .form form .formInfoInputs input {
 		margin-bottom: 15px;
@@ -492,9 +560,162 @@
 		max-width: 246.6px;
 	}
 	.contactPage .form form .custom-select {
-		width: 260px;
 		position: relative;
 		font-family: sans-serif;
+	}
+	.contactPage .form form .btnCheck {
+		flex-direction: column;
+	}
+	.contactPage .form form .btnCheck .formBtn {
+		flex: 0 0 100%;
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+	.contactPage .form form .btnCheck .checkbox {
+		flex: 0 0 100%;
+	}
+	.contactPage .form .sectionTitle h2 {
+		color: var(--white, #fff);
+		text-align: center;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: Montserrat;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: normal;
+	}
+	.contactPage .form .sectionTitle span.rotate-text {
+		color: var(--white, #fff);
+		text-align: center;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: Montserrat;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: normal;
+		margin-top: 10px;
+	}
+	.reviews .text {
+		color: var(--coral, #fe4e05);
+		text-align: center;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: Montserrat;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+	.reviews .ratingIndicator {
+		flex-wrap: wrap;
+	}
+	.reviews .ratingIndicator .ratingItem {
+		margin-bottom: 10px;
+		flex: 0 0 100%;
+	}
+	.teachers::after {
+		height: 27px;
+		top: -26px;
+	}
+	.teachers .sectionTitle span.rotate-text {
+		color: var(--white, #fff);
+		text-align: center;
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: Montserrat;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: normal;
+	}
+	.gallerySection::after {
+		top: 110px;
+	}
+	.gallerySection::before {
+		top: 120px;
+	}
+	.faqContent .sectionTitle {
+		color: var(--seablue, #0071bf);
+		font-variant-numeric: lining-nums proportional-nums;
+		font-family: Montserrat;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: normal;
+	}
+	.faqContent {
+		padding: 62px 0 53px 0;
+	}
+	.faqContent .faqItems {
+		max-width: 100%;
+		gap: 10px;
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+	.faqContent .faq-header h3 {
+		font-size: 14px;
+	}
+	.faqContent .faq-item {
+		border-radius: 20px;
+	}
+	.vacancy .vacancyContent {
+		flex-direction: column;
+	}
+	.vacancy::after {
+		height: 27px;
+		bottom: -25px;
+	}
+	.vacancy::before {
+		height: 27px;
+		top: -25px;
+	}
+	.gallerySection .gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.gallerySection .gallery a {
+		border-radius: 20px;
+	}
+	.gallerySection .gallery .glightbox.lastChild {
+		display: block;
+	}
+	.faqContent .faq-item.active .faq-header {
+		border-radius: 20px;
+	}
+	.networks .networksContent {
+		flex-direction: column;
+	}
+	.networks .sectionTitle {
+		font-size: 30px;
+	}
+	.map {
+		padding-top: 50px;
+	}
+	footer {
+		padding-top: 20px;
+	}
+	footer .footerContact {
+		flex-direction: column;
+	}
+	footer .footerContact .number a {
+		font-size: 24px;
+	}
+	footer .footerContact .socialNetworks {
+		margin-top: 10px;
+	}
+	footer .footerContact .logo {
+		width: 72px;
+		height: 72px;
+	}
+	footer::before {
+		height: 27px;
+		top: -26px;
+	}
+	footer .siteInfo {
+		flex-direction: column;
+	}
+	footer .siteInfo .siteInfo {
+		margin-bottom: 10px;
+	}
+	.contactPage .form {
+		padding: 20px;
 	}
 }
 @media (max-width: 576px) {
@@ -507,13 +728,41 @@
 	.sorting .tabContents {
 		margin-top: 20px;
 	}
+	.contactPage .form form .formInfoInputs input {
+		z-index: 99;
+		flex: 0 0 100%;
+	}
+	.contactPage .form form .custom-select {
+		flex: 0 0 100%;
+	}
+	.contactPage .form form .select-trigger {
+		position: relative;
+		z-index: 9999;
+		max-width: 100%;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+	}
+	.contactPage .form form .custom-select.active .select-options {
+		width: 100%;
+		padding-top: 50px;
+		z-index: 1;
+		top: 0px;
+		max-width: 381.6px;
+	}
+	.faqContent .faqItems {
+		flex-wrap: wrap;
+	}
+	.faqContent .faqItems .leftContent {
+		flex: 0 0 100%;
+	}
+	.faqContent .faqItems .rightContent {
+		flex: 0 0 100%;
+	}
 }
 
 @media (max-width: 480px) {
 	.sectionTitle span.rotated-text {
 		font-size: 36px;
 		display: inline-block;
-		width: 100%;
 	}
 }
 @media (max-width: 390px) {

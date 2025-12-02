@@ -1397,8 +1397,8 @@ header.sticky {
 						position: absolute;
 						top: 0;
 						left: 0;
-						width: 17px;
-						height: 17px;
+						width: 16px;
+						height: 16px;
 						border-radius: 50%;
 						background: #0071bf;
 						border: 2px solid #fff;
@@ -2143,6 +2143,9 @@ header.sticky {
 		img:hover {
 			transform: scale(1.03);
 		}
+		.glightbox.lastChild {
+			display: none;
+		}
 	}
 	.moreImg {
 		text-align: center;
@@ -2212,13 +2215,11 @@ header.sticky {
 		justify-content: space-between;
 		gap: 20px;
 		.leftContent {
-			height: inherit;
 			overflow: hidden;
 			gap: 20px;
 			flex: 0 0 49%;
 		}
 		.rightContent {
-			height: inherit;
 			overflow: hidden;
 			gap: 20px;
 			flex: 0 0 49%;
