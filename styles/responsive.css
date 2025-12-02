@@ -9,6 +9,9 @@
 	.phoneIcon {
 		display: none;
 	}
+	.mobileHeader .phoneIcon {
+		display: block;
+	}
 }
 @media (max-width: 1700px) {
 	.container {
@@ -763,6 +766,18 @@
 	.sectionTitle span.rotated-text {
 		font-size: 36px;
 		display: inline-block;
+	}
+	.wrapper .mobileMenuSection .mobileHeader .contact .socialNetworks ul li {
+		margin-right: 5px;
+	}
+	.wrapper .mobileMenuSection .container {
+		max-width: 95%;
+	}
+	.wrapper .mobileMenuSection {
+		padding: 20px;
+	}
+	.wrapper .mobileMenuSection .mobileHeader {
+		padding: 5px 10px;
 	}
 }
 @media (max-width: 390px) {

@@ -90,7 +90,137 @@ body {
 
 .wrapper {
 	overflow: hidden;
+	position: relative;
+	.mobileMenuSection {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		background: #efefee;
+		width: 100%;
+		height: 100vh;
+		padding: 50px;
+		.mobileHeader {
+			position: relative;
+			left: -40px;
+			background: rgba(0, 0, 0, 0.1);
+			padding: 5px 20px;
+			border-radius: 50px;
+			height: 80px;
+			margin: 0 0 40px 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.contact {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.socialNetworks {
+					ul {
+						display: flex;
+						align-items: center;
+						justify-content: flex-start;
+						li {
+							list-style: none;
+							margin-right: 15px;
+							img {
+								width: 40px;
+								height: 40px;
+							}
+						}
+						li:nth-child(2) {
+							a {
+								text-decoration: none;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 40px;
+								height: 40px;
+								border-radius: 50%;
+								background: url('../images/vcIconBg.jpg')
+									lightgray 0px 0px / 100% 100% no-repeat;
+								img {
+									object-fit: cover;
+									width: 24px;
+									height: 24px;
+								}
+							}
+						}
+					}
+				}
+				.numberPhone {
+					a {
+						width: 40px;
+						height: 40px;
+						text-decoration: none;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						color: var(--white, #fff);
+						font-family: Montserrat;
+						font-size: 20px;
+						font-style: normal;
+						font-weight: 800;
+						line-height: 120%;
+						padding: 0;
+						border-radius: 60px;
+						background: var(--coral, #fe4e05);
+						margin-left: 0px;
+					}
+				}
+			}
+			.closeBtn {
+				position: absolute;
+				top: 0;
+				right: -80px;
+				background: rgba(0, 0, 0, 0.1);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
+				color: orangered;
+				font-size: 24px;
+				font-family: Montserrat;
+				cursor: pointer;
+				transition: all 0.3s ease;
+			}
+			.closeBtn:hover {
+				color: #fff;
+				background: orangered;
+			}
+		}
+		.menuList {
+			ul {
+				li {
+					list-style: none;
+					margin-bottom: 20px;
+					a {
+						transition: all 0.3s ease;
+						display: inline-block;
+						text-decoration: none;
+						color: var(--black, #000);
+						font-variant-numeric: lining-nums proportional-nums;
+						font-family: Montserrat;
+						font-size: 24px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+					}
+					a:hover {
+						color: orangered;
+					}
+				}
+				li:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 }
+
 .sectionTitle {
 	color: var(--seablue, #0071bf);
 	font-variant-numeric: lining-nums proportional-nums;
@@ -151,6 +281,11 @@ body {
 .fade {
 	animation-name: fade;
 	animation-duration: 3s;
+	animation-delay: 1;
+}
+.fade02 {
+	animation-name: fade;
+	animation-duration: 0.5s;
 	animation-delay: 1;
 }
 @keyframes fade {

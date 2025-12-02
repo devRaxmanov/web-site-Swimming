@@ -15,6 +15,25 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 	loaderContent()
+	// Loader js end
+
+	// mobileMenu open/close js start
+	const openBtn = document.querySelector('header .mobileMenu .openBtn'),
+		closeBtn = document.querySelector(
+			'.wrapper .mobileMenuSection .mobileHeader .closeBtn'
+		),
+		mobileMenu = document.querySelector('.wrapper .mobileMenuSection')
+
+	openBtn.addEventListener('click', () => {
+		mobileMenu.classList.add('fade02')
+		mobileMenu.style.display = 'block'
+	})
+	closeBtn.addEventListener('click', () => {
+		mobileMenu.classList.remove('fade02')
+		mobileMenu.style.display = 'none'
+		loaderContent()
+	})
+	// mobileMEnu open/close js end
 
 	//	sliders js start
 	function firstSlider() {
