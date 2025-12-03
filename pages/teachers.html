@@ -526,6 +526,29 @@
 			.teachers .teachersItems .sliderItem {
 				flex: 0 0 48.5%;
 			}
+
+			.teachers .teachersItems .sliderItem .infoImg {
+				max-height: 350px;
+			}
+		}
+
+		@media (max-width: 440px) {
+			.teachers .teachersItems .sliderItem .infoImg .img {
+				overflow: hidden;
+				width: 141px;
+				height: 141px;
+				border-radius: 50%;
+				margin-bottom: 20px;
+			}
+
+			.teachers .teachersItems .sliderItem {
+				flex: 0 0 48%;
+				overflow: hidden;
+			}
+
+			.teachers .teachersItems .sliderItem .infoImg {
+				max-height: auto;
+			}
 		}
 	</style>
 
@@ -549,6 +572,23 @@
 			const header = this.document.querySelector('header')
 			header.classList.toggle('sticky', window.scrollY > 0)
 		})
+		// mobileMenu open/close js start
+		const openBtn = document.querySelector('header .mobileMenu .openBtn'),
+			closeBtn = document.querySelector(
+				'.wrapper .mobileMenuSection .mobileHeader .closeBtn'
+			),
+			mobileMenu = document.querySelector('.wrapper .mobileMenuSection')
+
+		openBtn.addEventListener('click', () => {
+			mobileMenu.classList.add('fade02')
+			mobileMenu.style.display = 'block'
+		})
+		closeBtn.addEventListener('click', () => {
+			mobileMenu.classList.remove('fade02')
+			mobileMenu.style.display = 'none'
+			loaderContent()
+		})
+		// mobileMEnu open/close js end
 	</script>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

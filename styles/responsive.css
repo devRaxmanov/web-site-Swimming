@@ -762,6 +762,7 @@
 	}
 	.banner {
 		height: 100vh;
+		margin-bottom: -242px;
 	}
 }
 
