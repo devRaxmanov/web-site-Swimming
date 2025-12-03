@@ -34,14 +34,14 @@
 			<div class="header">
 				<div class="logoNavbar">
 					<div class="logo">
-						<a href="#"><img src="../images/logo.png" alt=""></a>
+						<a href="../index.html"><img src="../images/logo.png" alt="logo"></a>
 					</div>
 					<div class="nav">
 						<ul>
 							<li><a href="#">Филиалы <i class="fa-solid fa-caret-up"></i></a></li>
 							<li><a href="#">Дети от 1,5 мес. до 7 лет</a></li>
 							<li><a href="#">О школе</a></li>
-							<li><a href="#">Тренеры</a></li>
+							<li><a href="../pages/teachers.html" class="trener">Тренеры</a></li>
 							<li><a href="#">Лагерь</a></li>
 							<li><a href="#">Полезное</a></li>
 						</ul>
@@ -277,9 +277,30 @@
 		</style>
 	</div>
 
+	<script>
+		const loader = document.querySelector('.loader')
+		function loaderContent02() {
+			window.addEventListener('load', function () {
+				setTimeout(() => {
+					loader.style.opacity = '0'
+
+					setTimeout(() => {
+						loader.style.display = 'none'
+					}, 300)
+				}, 2000)
+			})
+		}
+		loaderContent02()
+
+		// window scroll down header style js
+		window.addEventListener('scroll', function () {
+			const header = this.document.querySelector('header')
+			header.classList.toggle('sticky', window.scrollY > 0)
+		})
+	</script>
+
 	<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-	<script src="./gallery.js"></script>
 </body>
 
 </html>

@@ -760,6 +760,9 @@
 	.faqContent .faqItems .rightContent {
 		flex: 0 0 100%;
 	}
+	.banner {
+		height: 100vh;
+	}
 }
 
 @media (max-width: 480px) {

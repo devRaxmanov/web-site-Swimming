@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 	// loader js start
-	const loader = document.querySelector('.loader'),
-		galeryPage = document.querySelector('.gallerySection .moreImg a')
+	const loader = document.querySelector('.loader')
 
 	function loaderContent() {
 		window.addEventListener('load', function () {
@@ -15,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 	loaderContent()
+
 	// Loader js end
 
 	// mobileMenu open/close js start
